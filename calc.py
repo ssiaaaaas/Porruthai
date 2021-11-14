@@ -172,7 +172,11 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
 #####################################################################################
+
+######################################################################################
+#End of ui
 
     ##Remove character
     def remove_it(self):
@@ -282,3 +286,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+
