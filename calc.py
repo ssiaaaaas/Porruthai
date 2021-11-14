@@ -19,36 +19,41 @@ class Ui_MainWindow(object):
         self.outputLabel = QtWidgets.QLabel(self.centralwidget)
         self.outputLabel.setGeometry(QtCore.QRect(10, 10, 341, 91))
         font = QtGui.QFont()
-        font.setPointSize(36)
+        font.setPointSize(34)
         self.outputLabel.setFont(font)
         self.outputLabel.setFrameShape(QtWidgets.QFrame.Box)
         self.outputLabel.setFrameShadow(QtWidgets.QFrame.Raised)
         self.outputLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.outputLabel.setObjectName("outputLabel")
+
         self.percentButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("%"))
         self.percentButton.setGeometry(QtCore.QRect(10, 110, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.percentButton.setFont(font)
         self.percentButton.setObjectName("percentButton")
+
         self.cButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("c"))
         self.cButton.setGeometry(QtCore.QRect(100, 110, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.cButton.setFont(font)
         self.cButton.setObjectName("cButton")
+
         self.arrowButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.remove_it())
         self.arrowButton.setGeometry(QtCore.QRect(190, 110, 75, 75))
         font = QtGui.QFont()
-        font.setPointSize(26)
+        font.setPointSize(24)
         self.arrowButton.setFont(font)
         self.arrowButton.setObjectName("arrowButton")
+
         self.divideButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("/"))
         self.divideButton.setGeometry(QtCore.QRect(280, 110, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.divideButton.setFont(font)
         self.divideButton.setObjectName("divideButton")
+
         self.nineButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("9"))
         self.nineButton.setGeometry(QtCore.QRect(190, 200, 75, 75))
         font = QtGui.QFont()
@@ -67,12 +72,14 @@ class Ui_MainWindow(object):
         font.setPointSize(26)
         self.eightButton.setFont(font)
         self.eightButton.setObjectName("eightButton")
+
         self.multiplyButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("*"))
         self.multiplyButton.setGeometry(QtCore.QRect(280, 200, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.multiplyButton.setFont(font)
         self.multiplyButton.setObjectName("multiplyButton")
+
         self.sixButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("6"))
         self.sixButton.setGeometry(QtCore.QRect(190, 290, 75, 75))
         font = QtGui.QFont()
@@ -91,12 +98,14 @@ class Ui_MainWindow(object):
         font.setPointSize(26)
         self.fiveButton.setFont(font)
         self.fiveButton.setObjectName("fiveButton")
+
         self.minusButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("-"))
         self.minusButton.setGeometry(QtCore.QRect(280, 290, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.minusButton.setFont(font)
         self.minusButton.setObjectName("minusButton")
+
         self.threeButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("3"))
         self.threeButton.setGeometry(QtCore.QRect(190, 380, 75, 75))
         font = QtGui.QFont()
@@ -115,36 +124,42 @@ class Ui_MainWindow(object):
         font.setPointSize(26)
         self.twoButton.setFont(font)
         self.twoButton.setObjectName("twoButton")
+
         self.addButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("+"))
         self.addButton.setGeometry(QtCore.QRect(280, 380, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.addButton.setFont(font)
         self.addButton.setObjectName("addButton")
+
         self.equalButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.math_it("="))
         self.equalButton.setGeometry(QtCore.QRect(280, 470, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.equalButton.setFont(font)
         self.equalButton.setObjectName("equalButton")
+
         self.zeroButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.press_it("0"))
         self.zeroButton.setGeometry(QtCore.QRect(100, 470, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.zeroButton.setFont(font)
         self.zeroButton.setObjectName("zeroButton")
+
         self.plusminusButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.plus_minus_it("+/-"))
         self.plusminusButton.setGeometry(QtCore.QRect(10, 470, 75, 75))
         font = QtGui.QFont()
-        font.setPointSize(26)
+        font.setPointSize(23)
         self.plusminusButton.setFont(font)
         self.plusminusButton.setObjectName("plusminusButton")
+
         self.decimalButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.dot_it())
         self.decimalButton.setGeometry(QtCore.QRect(190, 470, 75, 75))
         font = QtGui.QFont()
         font.setPointSize(26)
         self.decimalButton.setFont(font)
         self.decimalButton.setObjectName("decimalButton")
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 367, 22))
@@ -157,7 +172,9 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    #Remove character
+#####################################################################################
+
+    ##Remove character
     def remove_it(self):
         #Grab what's on the screen already
         screen = self.outputLabel.text()
@@ -166,7 +183,7 @@ class Ui_MainWindow(object):
         #Output back
         self.outputLabel.setText(screen)
 
-    #Equal
+    ##EqualButton
     def math_it(self, screen):
         screen = self.outputLabel.text()
         try:
@@ -177,27 +194,52 @@ class Ui_MainWindow(object):
             #output error
             self.outputLabel.setText("ERROR")
 
-    #Change from positive/negative
+    ##Change from positive/negative
     def plus_minus_it(self, screen):
-        #Grab what's on the screen already
         screen = self.outputLabel.text()
-        if "-" in screen:
-            self.outputLabel.setText(screen.replace("-", ""))
-        else:
-            self.outputLabel.setText(f'-{screen}')
+        for i in range(len(screen) - 1, -1, -1):
+            if i == 0:
+                if screen[i] == '-':
+                    screen = screen[1:]
+                    break
+                else:
+                    screen = '-' + screen
+            else:
+                if screen[i] == '+':
+                    screen = screen[:i] + '-' + screen[i + 1:]
+                    break
+                elif screen[i] == '-':
+                    screen = screen[:i] + '+' + screen[i + 1:]
+                    break
+        self.outputLabel.setText(screen)
 
-    #Add a decimal
+    ##Add a decimal
+    global dot
+    dot=False
     def dot_it(self):
+        global dot
         screen = self.outputLabel.text()
-
-        if screen[-1] == ".":
+        if dot == False:
+            screen = f'{screen}.'
+            self.outputLabel.setText(screen)
+            
+            dot = True
+        elif dot == True:
             pass
         else:
-            self.outputLabel.setText(f'{screen}.')
+            pass
 
+    ##c, %
     def press_it(self, pressed):
         if pressed == "c": #clear
             self.outputLabel.setText("0")
+        elif pressed == "%":
+            screen = self.outputLabel.text()
+            self.outputLabel.setText(f'0.01*{screen}')
+            screen = self.outputLabel.text()
+            answer = eval(screen)
+            #output answer
+            self.outputLabel.setText(str(answer))
         else:
             #delete 0 before other numbers
             if self.outputLabel.text() == "0":
@@ -205,6 +247,7 @@ class Ui_MainWindow(object):
             #concatenate the pressed button with was there already
             self.outputLabel.setText(f'{self.outputLabel.text()}{pressed}')
 
+    #Buttons
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Calculator"))
